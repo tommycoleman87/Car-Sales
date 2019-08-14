@@ -3,14 +3,13 @@ import React from 'react';
 import AddedFeature from './AddedFeature';
 
 const AddedFeatures = props => {
-  console.log(props.removeFeature)
   return (
     <div className="content">
       <h6>Added features:</h6>
-      {props.car.features.length ? (
+      {props.car.car.features.length ? (
         <ol type="1">
-          {props.car.features.map(item => (
-            <AddedFeature key={item.id} feature={item} deleteFeature={props.deleteFeature}/>
+          {props.car.car.features.map(item => (
+            <AddedFeature key={item.id} feature={item} deleteFeature={props.deleteFeature} car={props.car}/>
           ))}
         </ol>
       ) : (
